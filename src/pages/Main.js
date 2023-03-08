@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
     const [characters, setCharacters] = useState([]);
-    const [searchQuery, setSearchQuery] =  useState(localStorage.getItem('searchQuery') || '');
-
-
+    const [searchQuery, setSearchQuery] = useState(localStorage.getItem('searchQuery') || '');
 
     useEffect(() => {
         async function fetchCharacters() {
@@ -25,6 +23,10 @@ const Main = () => {
 
         fetchCharacters();
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem('searchQuery', searchQuery);
+    }, [searchQuery]);
 
     function compareNames(a, b) {
         if (a.name < b.name) {
@@ -44,16 +46,13 @@ const Main = () => {
     });
 
     function handleSearchQueryChange(event) {
-        const value = event.target.value;
-        setSearchQuery(value);
-        localStorage.setItem('searchQuery', value);
+        setSearchQuery(event.target.value);
     }
-
 
     return (
         <div className={'Main'}>
             <img className={`logo`} src={logo} />
-            <Form onSearchQueryChange={handleSearchQueryChange} />
+            <Form onSearchQueryChange={handleSearchQueryChange} initialValue={searchQuery} />
             <div className={'Box_div'}>
                 {sortedCharacters.map((character) => (
                     <Box
@@ -70,4 +69,3 @@ const Main = () => {
 };
 
 export default Main;
-
