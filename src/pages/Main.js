@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
     const [characters, setCharacters] = useState([]);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] =  useState(localStorage.getItem('searchQuery') || '');
+
+
 
     useEffect(() => {
         async function fetchCharacters() {
@@ -42,8 +44,11 @@ const Main = () => {
     });
 
     function handleSearchQueryChange(event) {
-        setSearchQuery(event.target.value);
+        const value = event.target.value;
+        setSearchQuery(value);
+        localStorage.setItem('searchQuery', value);
     }
+
 
     return (
         <div className={'Main'}>
