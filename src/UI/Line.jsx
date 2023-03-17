@@ -23,7 +23,7 @@ const Line = ({id}) => {
     
     console.log(characters)
         return (
-        <div className={"LineBase"}>
+        <div   className={"LineBase"}>
             <div className={"LineBase_line"}>
             <h4 className={"text_Line"}>Gender</h4>
             <p className={"text_Line2"}>{characters.gender}</p>

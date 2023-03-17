@@ -1,0 +1,27 @@
+.auth{
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+.buttonsimple{
+  margin-top: 5px;
+  border: 1px solid black;
+  height: 30px;
+  width: 100px;
+  background: white;
+}.buttonsimple:hover{
+   transform: scale(1.03);
+ } .buttonsimple:active{
+    transform: scale(1.00);
+    }
+
+.buttonsimple-exit{
+  margin-top: 5px;
+  border: 1px solid black;
+  height: 30px;
+  width: 100px;
+  background: white;
+}.buttonsimple-exit:hover{
+    transform: scale(.9);
+ }

@@ -5,14 +5,28 @@
   justify-content: center;
   align-items: center;
 }
-
+.Div_exit{
+  margin-left: auto;
+  margin-right: 30px;
+  position: static;
+}
 .Box_div{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 1055px;
 }
-
+.login{
+  display: grid;
+  justify-content: center;
+  border: 1px solid black;
+  width: 350px;
+  height: 100px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
 .logo{
   margin-top: 54px;
   justify-content: center;
@@ -67,6 +81,17 @@
     height: 104px;
   }
 
+  .login{
+    display: grid;
+    justify-content: center;
+    border: 1px solid black;
+    width: 280px;
+    height: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+  }
 
   .Box_div{
     display: flex;
@@ -75,4 +100,23 @@
     flex-wrap: wrap;
     width: 400px;
   }
+}
+
+
+
+@media only screen and (max-width: 280px) {
+
+
+  .login{
+    display: grid;
+    justify-content: center;
+    border: 1px solid black;
+    width: 240px;
+    height: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+  }
+
 }

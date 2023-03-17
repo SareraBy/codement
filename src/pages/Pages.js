@@ -26,10 +26,13 @@ const Pages = () => {
 
 
     return (
-        <div className={"Page"}>
-            <div className={"Go_back_div"}>
+        <div data-aos="fade-up"
+             data-aos-duration="1000"
+             className={"Page"}
+        >
+            <div  className={"Go_back_div"}>
 
-            <Link className={"Go_back"} to={'/'}><img className={"Go_back_img"} width={10} height={10} src={arrow}/> GO BACK</Link>
+            <Link  className={"Go_back"} to={'/'}><img className={"Go_back_img"} width={10} height={10} src={arrow}/> GO BACK</Link>
             </div>
             <img className={'pg_img'} src={characters.image}   />
             <p className={"text_page"}>{characters.name}</p>

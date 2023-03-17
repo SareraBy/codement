@@ -11,7 +11,7 @@ const Form = ({onSearchQueryChange, initialValue }) => {
     }
 
     return (
-        <div className={"Form_main"}>
+        <div  data-aos-duration="1000" data-aos="flip-up" className={"Form_main"}>
             <img src={Vector} width={17} height={17}/>
             <input className='Form_input'  value={searchQuery} onChange={handleInputChange} type='name' placeholder='Filter by name...'/>
         </div>
